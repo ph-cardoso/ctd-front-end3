@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 01</title>
+    <title>Mesa Aula 01</title>
 </head>
 <body>
-    <div class="container"></div>
+    <div id="root"></div>
 
 
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
     <script>
-        var h1 = React.createElement("h1", {id:"title"}, "Hello World");
-        ReactDOM.render(h1, document.getElementById('container'));
+        const h1 = React.createElement('h1', {style:{ textAlign: 'center' }}, 'Hello World');
+        const p1 = React.createElement('p', {style:{ textAlign: 'center', fontSize: 22 }}, 'Nome: Pedro Henrique');
+        const p2 = React.createElement('p', {style:{ textAlign: 'center', fontSize: 22 }}, 'Sobrenome: Lima Cardoso');
+        const p3 = React.createElement('p', {style:{ textAlign: 'center', fontSize: 22 }}, 'Idade: 21');
 
+        const domContainer = document.querySelector('#root');
+        const elements = [h1, p1, p2, p3];
+        ReactDOM.render(elements, domContainer);
     </script>
 </body>
 </html>
